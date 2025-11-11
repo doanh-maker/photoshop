@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Tổng quan CSS</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #fff;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* MENU */
+        ul.menu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            background: #eee;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .menu > li {
+            padding: 12px 25px;
+            position: relative;
+            cursor: pointer;
+            border-right: 1px solid #ccc;
+            transition: 0.2s;
+        }
+
+        .menu > li:last-child {
+            border-right: none;
+        }
+
+        .menu > li:hover {
+            background: orange;
+            color: white;
+        }
+
+        /* submenu */
+        .submenu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            position: absolute;
+            top: 40px;
+            left: 0;
+            background: #f6e79a;
+            border: 1px solid #ccc;
+            width: 180px;
+            display: none;
+            z-index: 99;
+        }
+
+        .submenu li {
+            border-bottom: 1px solid #ccc;
+        }
+
+        .submenu li:last-child {
+            border-bottom: none;
+        }
+
+        .submenu a {
+            text-decoration: none;
+            display: block;
+            padding: 8px 12px;
+            color: black;
+        }
+
+        .submenu li:hover a {
+            background: orange;
+            color: white;
+        }
+
+        .dropdown:hover .submenu {
+            display: block;
+        }
+
+        /* --- NỘI DUNG --- */
+        .content {
+            width: 80%;
+            margin: auto;
+            margin-top: 20px;
+            line-height: 1.6;
+        }
+
+        h1 {
+            color: orange;
+            border-left: 6px solid orange;
+            padding-left: 10px;
+        }
+
+        .box {
+            background: #fffbe6;
+            padding: 15px;
+            border: 1px solid #f2ce6a;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        pre {
+            background: #eee;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        table, th, td {
+            border: 1px solid #aaa;
+        }
+
+        th {
+            background: orange;
+            color: white;
+        }
+
+        td, th {
+            padding: 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ✅ MENU -->
+    <ul class="menu">
+        <li>Trang chủ</li>
+        <li>Ngôn ngữ HTML</li>
+
+        <li class="dropdown">Ngôn ngữ CSS
+            <ul class="submenu">
+                <li><a href="tongquan.html" target="_self">Tổng quan</a></li>
+                <li><a href="thuoctinhdinhdang.html">Thuộc tính định dạng</a></li>
+                <li><a href="thuoctinhkhac.html">Thuộc tính khác</a></li>
+                <li><a href="thietkelayout.html">Thiết kế Layout</a></li>
+            </ul>
+        </li>
+
+        <li>Ngôn ngữ JavaScript</li>
+        <li>Thiết kế Đồ họa</li>
+    </ul>
+
+    <!-- ✅ NỘI DUNG -->
+    <div class="content">
+
+        <h1>Tổng quan về CSS</h1>
+
+        <div class="box">
+            <p><b>CSS (Cascading Style Sheets)</b> là ngôn ngữ dùng để tạo kiểu dáng cho trang web: màu sắc, chữ, bố cục, hình ảnh, hiệu ứng... giúp trang web đẹp và chuyên nghiệp hơn.</p>
+        </div>
+
+        <h2>✔ Ví dụ CSS</h2>
+        <pre>
+h1 {
+    color: orange;
+    text-align: center;
+}
+p {
+    font-size: 18px;
+    color: blue;
+}
+        </pre>
+
+        <h2>✔ 3 cách sử dụng CSS</h2>
+        <table>
+            <tr>
+                <th>Loại</th>
+                <th>Chức năng</th>
+            </tr>
+            <tr>
+                <td>Internal CSS</td>
+                <td>Viết trong thẻ &lt;style&gt;</td>
+            </tr>
+            <tr>
+                <td>External CSS</td>
+                <td>Tạo file .css riêng và liên kết bằng &lt;link&gt;</td>
+            </tr>
+            <tr>
+                <td>Inline CSS</td>
+                <td>Viết trực tiếp trong thẻ HTML</td>
+            </tr>
+        </table>
+
+    </div>
+
+</body>
+</html>
+

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Menu Website</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #fff;
+        }
+
+        ul.menu {
+            list-style: none;
+            padding: 0;
+            margin: 50px auto;
+            display: flex;
+            justify-content: center;
+            background: #eee;
+            border: 1px solid #ccc;
+        }
+
+        .menu > li {
+            padding: 10px 20px;
+            position: relative;
+            cursor: pointer;
+            border-right: 1px solid #ccc;
+        }
+
+        .menu > li:last-child {
+            border-right: none;
+        }
+
+        /* MENU CON */
+        .submenu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            position: absolute;
+            top: 36px;
+            left: 0;
+            background: #f6e79a;
+            border: 1px solid #ccc;
+            width: 160px;
+            display: none;
+        }
+
+        .submenu li {
+            padding: 8px 12px;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .submenu li:last-child {
+            border-bottom: none;
+        }
+
+        /* Khi di chuột sẽ hiện menu con */
+        .dropdown:hover .submenu {
+            display: block;
+           
+        }
+    </style>
+</head>
+<body>
+
+    <ul class="menu">
+        <li>Trang chủ</li>
+        <li>Ngôn ngữ HTML</li>
+
+        <li class="dropdown">Ngôn ngữ CSS
+            <ul class="submenu">
+                <li>Tổng quan</li>
+                <li>Thuộc tính định dạng</li>
+                <li>Thuộc tính khác</li>
+                <li>Thiết kế Layout</li>
+            </ul>
+        </li>
+
+        <li>Ngôn ngữ JavaScript</li>
+        <li>Thiết kế Đồ họa</li>
+    </ul>
+
+</body>
+</html>
